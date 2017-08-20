@@ -1,0 +1,14 @@
+CREATE DATABASE cubewars_db;
+
+USE cubewars_db;
+
+CREATE TABLE users (
+    id INTEGER(4) AUTO_INCREMENT NOT NULL,
+    user_name VARCHAR(100) NOT NULL,
+    user_email VARCHAR(250),
+    dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    dateModified DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    PRIMARY KEY (id)
+);
+
+SELECT * FROM users;

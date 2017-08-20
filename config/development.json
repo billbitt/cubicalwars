@@ -1,0 +1,9 @@
+{
+	"AnalyticsConfig":{
+		"googleId": "XXXXX"
+	},
+
+	"Logging": {
+		"LogLevel": "silly"
+	}
+}

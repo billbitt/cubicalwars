@@ -1,0 +1,45 @@
+{
+  "name": "cubewars",
+  "version": "0.0.1",
+  "description": "A browser-based card game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "precommit": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://billbitt@bitbucket.org/billbitt/cubicalwars.git"
+  },
+  "keywords": [
+    "card",
+    "game"
+  ],
+  "author": "@billbitt",
+  "bugs": {
+    "url": "https://billbitt@bitbucket.org/billbitt/cubicalwars.git/issues"
+  },
+  "homepage": "https://billbitt@bitbucket.org/billbitt/cubicalwars.git#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "config": "^1.26.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.14.0",
+    "nodemon": "^1.11.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "6.10.3",
+    "eslint-plugin-standard": "3.0.1",
+    "husky": "^0.13.4"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"AnalyticsConfig":{
+		"googleId": "XXXXXX"
+	},
+	"Logging": {
+		"LogLevel": "debug"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"AnalyticsConfig":{
+		"googleId": "none"
+	},
+	"Logging": {
+		"LogLevel": "none"
+	}
+}
