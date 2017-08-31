@@ -1,0 +1,26 @@
+
+#chatbox, #chat-input-area {
+  margin: 1em 0em 1em 0em;
+}
+
+#chat-display {
+  background: rgba(255, 255, 0, 0.40);
+  height: 10em;
+  padding: .5em;
+  overflow-y: scroll;
+}
+
+#chat-display > p {
+  color: #4A0808;
+}
+
+#chat-input {
+  width: 80%;
+  padding: .5em;
+}
+
+#chat-submit {
+  width: 10%;
+  padding: .5em;
+  margin: 0em 1em 0em 1em;
+}

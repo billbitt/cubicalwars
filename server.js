@@ -8,6 +8,7 @@ const winston = require('winston');
 const logLevel = config.get('Logging.LogLevel');
 const PORT = process.env.PORT || 3000;
 const userController = require('./controllers/user_controller.js');
+const chatController = require('./controllers/chat_controller.js');
 
 // configure logging
 require('./helpers/logging/loggerSetup.js')(winston, logLevel);
@@ -30,9 +31,12 @@ app.set('view engine', 'handlebars');
 
 // require express routes
 app.use('/user', userController);
+app.use('/chat', chatController);
 require('./routes/html-routes.js')(app);
 
+var http = require('./routes/sockets-routes.js')(app);
+
 // start server
-app.listen(PORT, () => {
+http.listen(PORT, () => {
   winston.info(`Server is listening on PORT ${PORT}`);
 });

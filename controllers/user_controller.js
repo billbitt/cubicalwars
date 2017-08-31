@@ -2,11 +2,11 @@
 const express = require('express');
 const router = express.Router();
 const logger = require('winston');
-const user = require('../models/user.js'); // import the model
+const User = require('../models/user.js'); // import the model
 
 // create routes on the router
 router.get('/:id', ({ params }, response) => {
-  user.getAllUserInfo(params.id)
+  User.getAllUserInfo(params.id)
     .then((data) => {
       response.send(data);
     })
@@ -16,7 +16,7 @@ router.get('/:id', ({ params }, response) => {
 });
 
 router.post('/', ({ body }, response) => {
-  user.createUser(body.userInfo)
+  User.createUser(body.userInfo)
     .then((data) => {
       response.send(`user created: ${data}`);
     })
@@ -26,7 +26,7 @@ router.post('/', ({ body }, response) => {
 });
 
 router.put('/:id', ({ params, body }, response) => {
-  user.updateUser(params.id, body.updatedUserInfo)
+  User.updateUser(params.id, body.updatedUserInfo)
     .then((data) => {
       response.send(`user updated: ${data}`);
     })
@@ -36,7 +36,7 @@ router.put('/:id', ({ params, body }, response) => {
 });
 
 router.delete('/:id', function ({ params }, response) {
-  user.deleteUser(params.id)
+  User.deleteUser(params.id)
     .then((data) => {
       response.send(`user deleted: ${data}`);
     })
